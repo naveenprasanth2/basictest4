@@ -1,5 +1,6 @@
 package practise1;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -41,7 +42,7 @@ public class AlertsAndOthers {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,1000)");
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[@id='courses-iframe']")));
 		driver.findElement(By.xpath("//li/a[text()='Courses']")).click();
 		driver.switchTo().defaultContent();

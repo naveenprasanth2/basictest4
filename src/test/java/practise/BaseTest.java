@@ -26,7 +26,6 @@ public class BaseTest {
 
 		System.setProperty("webdriver.chrome.driver", chromePath);
 		DesiredCapabilities dc = new DesiredCapabilities();
-		dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		ChromeOptions co = new ChromeOptions();
 		co.addArguments("--headless");

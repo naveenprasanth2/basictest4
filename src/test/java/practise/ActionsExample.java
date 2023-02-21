@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class ActionsExample {
 	@Test
 	public void test() {
@@ -23,7 +25,7 @@ public class ActionsExample {
 		act.keyUp(Keys.CONTROL).perform();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,1000)");
-		WebDriverWait wait = new WebDriverWait(driver, 5);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//iframe[@id='courses-iframe']")));
 //		driver.switchTo().frame("//iframe[@id='courses-iframe']");
 		driver.findElement(By.xpath("//li/a[text()='Courses']")).click();

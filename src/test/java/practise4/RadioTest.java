@@ -74,7 +74,7 @@ public class RadioTest {
 		act.keyUp(Keys.CONTROL).perform();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scroll(0,1000)");
-		WebDriverWait wait1 = new WebDriverWait(driver, 5);
+		WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait1.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(driver.findElement(By.xpath("//iframe"))));
 		driver.findElement(By.xpath("//*[text()='Courses']")).click();
 		driver.switchTo().defaultContent();

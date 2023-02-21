@@ -29,7 +29,6 @@ public class BaseClassTest {
 		System.setProperty("webdriver.chrome.driver", chromePath);
 		DesiredCapabilities dc = new DesiredCapabilities();
 		dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
-		dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		ChromeOptions co = new ChromeOptions();
 		co.addArguments("--headless");
 		co.addArguments("--disable-infobars");
