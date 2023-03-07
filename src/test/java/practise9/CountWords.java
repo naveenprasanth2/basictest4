@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class CountWords {
     public static void main(String[] args) {
         char[] a = {'s', 'a', 'f', 'm', 'm', 'a'};
-        new String(a).chars().mapToObj(i -> (char) i).collect(Collectors.toList())
+        new String(a).chars().mapToObj(i -> (char) i).toList()
                 .stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
                 .entrySet().stream().min((x1, x2) -> {
                     if (!Objects.equals(x1.getValue(), x2.getValue())) {
